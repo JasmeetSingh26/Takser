@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const TARGET = 'https://task-management-dashboard-backend.onrender.com'
+const TARGET = 'https://takser.onrender.com/'
 
 async function handler(req: NextRequest) {
   const url = new URL(req.url)
