@@ -4,8 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination:
-          "https://task-management-dashboard-backend.onrender.com/api/:path*",
+        destination: "https://takser.onrender.com/api/:path*",
       },
     ];
   },

@@ -9,6 +9,7 @@ async function handler(req: NextRequest) {
   try {
     const headers = new Headers(req.headers)
     headers.set('Content-Type', 'application/json')
+    console.log(headers)
 
     const response = await fetch(targetUrl, {
       method: req.method,

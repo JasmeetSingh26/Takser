@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors"; // Import CORS
 import connectDB from "./config/database.js";
 import userRoutes from "./routes/userRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
@@ -7,6 +8,12 @@ import taskRoutes from "./routes/taskRoutes.js";
 dotenv.config();
 
 const app = express();
+
+// ✅ Enable CORS for all requests
+app.use(cors()); // Allow all origins
+
+// ✅ If you want to allow only a specific frontend URL:
+// app.use(cors({ origin: "https://yourfrontend.com" }));
 
 // Middleware
 app.use(express.json());
